@@ -1,5 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 import type { Config } from 'tailwindcss'
+import daisyui from "daisyui"
 
 const config: Config = {
 	content: ['./src/{app,ui}/**/*.{ts,tsx}'],
@@ -21,6 +22,8 @@ const config: Config = {
 			addVariant('header-open', 'body:has(#header-open:checked) &')
 			addVariant('header-closed', 'body:has(#header-open:not(:checked)) &')
 		}),
+		daisyui,
+
 	],
 	safelist: [{ pattern: /action.*/ }, 'ghost'],
 }
